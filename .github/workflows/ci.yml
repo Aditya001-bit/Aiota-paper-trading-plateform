@@ -1,0 +1,25 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: backend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: pnpm/action-setup@v4
+        with: { version: 11 }
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm exec jest --runInBand
+  dashboard:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: dashboard } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: pnpm/action-setup@v4
+        with: { version: 11 }
+      - run: pnpm install --ignore-scripts
+      - run: CI=false pnpm exec react-scripts build

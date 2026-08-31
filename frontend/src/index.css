@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-link{
+  margin-left: 40px;
+}
+
+:root { --aiota-navy: #071a35; --aiota-blue: #2563eb; --aiota-cyan: #22d3ee; --aiota-ink: #10213d; }
+body { color: var(--aiota-ink); }
+.aiota-hero { background: radial-gradient(circle at 85% 15%, #183c71 0, var(--aiota-navy) 55%, #041021 100%); color: #fff; overflow: hidden; }
+.aiota-hero h1 { font-size: clamp(2.5rem, 5vw, 4.4rem); line-height: 1.06; font-weight: 700; margin: 1rem 0; }
+.aiota-hero p { font-size: 1.15rem; line-height: 1.7; color: #cbd5e1; max-width: 37rem; }
+.aiota-eyebrow { color: var(--aiota-cyan); font-size: .75rem; font-weight: 700; letter-spacing: .16em; }
+.aiota-primary { background: var(--aiota-blue); border: 0; color: #fff; padding: .75rem 1.25rem; }
+.aiota-primary:hover { background: #1d4ed8; color: #fff; }
+.aiota-disclaimer { font-size: .78rem !important; margin-top: 1rem; }
+.aiota-footer { margin-top: 5rem; background: #071a35; color: #cbd5e1; }
+.aiota-footer h2, .aiota-footer h6 { color: #fff; }
+.aiota-footer a { display: block; color: #93c5fd; margin: .45rem 0; text-decoration: none; }
+.aiota-footer a:hover { color: #fff; }
+.aiota-surface { background: #f5f8ff; }
+.aiota-card { height: 100%; background: #fff; border: 1px solid #dbe7fb; border-radius: 14px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(15, 35, 70, .06); }
+.aiota-card h3, .aiota-card h5 { color: var(--aiota-navy); }
+
+#supportHero{
+  background-color: rgb(56, 126, 209);
+  color: white;
+}
+
+#supportHero a{
+  color: white;
+}
+
+#supportWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+}
+
+#supportHero input{
+  padding: 20px 50px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+.aiota-support { background: linear-gradient(125deg, #071a35, #1d4ed8); color: #fff; }
+.aiota-support h1 { max-width: 42rem; font-size: clamp(2rem, 4vw, 3.5rem); margin: 1rem 0; }
+.aiota-support p { max-width: 46rem; color: #dbeafe; font-size: 1.1rem; line-height: 1.7; }

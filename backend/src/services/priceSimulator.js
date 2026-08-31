@@ -1,0 +1,5 @@
+const Instrument = require("../models/Instrument"); const PriceSnapshot = require("../models/PriceSnapshot"); let timer;
+function delta(symbol, tick, price) { return Math.round((`${symbol}:${tick}`.split("").reduce((n, char) => n + char.charCodeAt(0), 0) % 401 - 200) * Math.max(1, price / 100000)); }
+async function tickPrices() { const instruments = await Instrument.find(); await Promise.all(instruments.map(async (item) => { const pricePaise = Math.max(100, item.currentPricePaise + delta(item.symbol, item.tick + 1, item.currentPricePaise)); await Instrument.updateOne({ _id: item._id }, { currentPricePaise: pricePaise, tick: item.tick + 1, marketDataSource: "SIMULATED", quoteUpdatedAt: new Date() }); await PriceSnapshot.create({ instrument: item._id, pricePaise, source: "SIMULATED" }); })); }
+function startPriceSimulator() { if (!timer) timer = setInterval(() => tickPrices().catch((error) => console.error("Price tick failed", error)), Number(process.env.PRICE_TICK_MS || 30000)); return timer; }
+module.exports = { tickPrices, startPriceSimulator };

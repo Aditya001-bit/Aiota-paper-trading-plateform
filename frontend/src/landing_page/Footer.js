@@ -1,0 +1,4 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+export default function Footer() { return <footer className="aiota-footer"><div className="container py-5"><div className="row g-4"><div className="col-md-5"><h2 className="fw-bold">A<span className="text-primary">I</span>OTA</h2><p>A full-stack virtual trading simulator built for learning market workflows and engineering reliable software.</p><small>© 2026 Aiota. Virtual trading only; no real-money orders or investment advice.</small></div><div className="col-md-3"><h6>Explore</h6><Link to="/product">Simulator features</Link><Link to="/about">About Aiota</Link><Link to="/support">Support</Link></div><div className="col-md-4"><h6>Built by</h6><p>Aditya Kasaudhan<br />Computer Science &amp; Engineering student</p><a href="https://github.com/Aditya001-bit">GitHub</a><a href="https://linkedin.com/in/aditya-kasaudhan-92676121b/">LinkedIn</a></div></div></div></footer>; }

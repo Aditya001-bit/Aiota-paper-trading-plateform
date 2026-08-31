@@ -1,0 +1,13 @@
+# Dependencies and generated files
+**/node_modules/
+**/build/
+**/coverage/
+
+# Secrets and machine-specific settings
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Logs and operating-system files
+*.log
+.DS_Store

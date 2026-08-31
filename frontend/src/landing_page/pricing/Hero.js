@@ -1,0 +1,2 @@
+import React from "react";
+export default function Hero() { return <section className="container py-5 text-center"><span className="aiota-eyebrow text-primary">SIMPLE BY DESIGN</span><h1 className="display-5 mt-3">Aiota is free to use.</h1><p className="lead text-muted">There are no brokerage charges, deposits, withdrawals, or real-money services because Aiota is a virtual trading simulator.</p></section>; }

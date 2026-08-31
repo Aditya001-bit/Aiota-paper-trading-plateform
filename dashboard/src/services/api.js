@@ -1,0 +1,4 @@
+import axios from "axios";
+const client = axios.create({ baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:3002/api/v1" });
+export const setAccessToken = (token) => { client.defaults.headers.common.Authorization = token ? `Bearer ${token}` : undefined; };
+export const api = { signup: (payload) => client.post("/auth/signup", payload), login: (payload) => client.post("/auth/login", payload), me: () => client.get("/users/me"), instruments: () => client.get("/instruments"), getInstrumentHistory: (symbol, range = "1M") => client.get(`/instruments/${symbol}/history`, { params: { range } }), marketDataStatus: () => client.get("/market-data/status"), watchlist: () => client.get("/watchlist"), addWatchlist: (symbol) => client.post("/watchlist", { symbol }), removeWatchlist: (symbol) => client.delete(`/watchlist/${symbol}`), portfolio: () => client.get("/portfolio"), orders: () => client.get("/orders"), trade: (payload) => client.post("/orders", payload) };

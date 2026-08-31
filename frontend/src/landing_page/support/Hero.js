@@ -1,0 +1,2 @@
+import React from "react";
+export default function Hero() { return <section className="aiota-support"><div className="container py-5"><span className="aiota-eyebrow">AIOTA SUPPORT</span><h1>Build, explore, and learn with confidence.</h1><p>This is an educational simulator. It uses virtual cash and simulated instruments, so no real trades, deposits, withdrawals, or investment advice are involved.</p></div></section>; }
