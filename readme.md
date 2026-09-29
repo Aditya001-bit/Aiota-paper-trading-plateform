@@ -1,5 +1,7 @@
 # Aiota
 
+Live Demo link : https://aiota-paper-trading-plateform.vercel.app/
+
 Aiota is a multi-user stock-trading simulator. It uses virtual INR cash only and does not submit orders to any broker or exchange.
 
 ## Run locally
